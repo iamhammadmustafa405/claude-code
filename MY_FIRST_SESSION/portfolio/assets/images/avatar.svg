@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Avatar placeholder">
+  <!-- Placeholder portrait. Replace with your own photo (e.g. assets/images/avatar.jpg) and update the <img> in index.html. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ebe8ff"/>
+      <stop offset="1" stop-color="#d3f4f0"/>
+    </linearGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a7df6"/>
+      <stop offset="1" stop-color="#5b4cf0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="165" r="70" fill="url(#fig)"/>
+  <path d="M62 400c0-86 62-142 138-142s138 56 138 142z" fill="url(#fig)"/>
+</svg>

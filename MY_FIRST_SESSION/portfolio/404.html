@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | Your Name</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {}
+  </script>
+  <style>
+    .not-found {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .not-found h1 {
+      font-size: clamp(5rem, 18vw, 9rem);
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .not-found p {
+      max-width: 420px;
+      margin: 12px auto 28px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="not-found">
+    <div>
+      <h1>404</h1>
+      <h2 class="section-title">Page not found</h2>
+      <p>The page you're looking for doesn't exist or may have moved.</p>
+      <a href="index.html" class="btn btn-primary">Back to home</a>
+    </div>
+  </main>
+</body>
+</html>

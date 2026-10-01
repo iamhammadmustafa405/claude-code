@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Your Name, a full-stack developer building fast, accessible and beautifully crafted web applications." />
+  <meta name="author" content="Your Name" />
+  <meta name="theme-color" content="#f7f7fb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d0e13" media="(prefers-color-scheme: dark)" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Name | Full-Stack Developer" />
+  <meta property="og:description" content="Fast, accessible and beautifully crafted web applications." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Runs before first paint: enables JS-only styles and applies a saved theme without a flash -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {}
+  </script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="Your Name, back to top">YN<span>.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span> Available for freelance work</p>
+          <h1 class="hero-title reveal" style="--delay: 80ms">Hi, I'm <span class="accent">Your Name</span></h1>
+          <p class="hero-role reveal" style="--delay: 160ms">
+            <span class="sr-only">I build fast web apps, clean APIs and accessible interfaces.</span>
+            <span aria-hidden="true">I build <span class="typed" id="typed" data-words='["fast web apps.", "clean APIs.", "accessible interfaces.", "things people love."]'>fast web apps.</span><span class="caret"></span></span>
+          </p>
+          <p class="hero-blurb reveal" style="--delay: 240ms">
+            I'm a full-stack developer who turns ideas into fast, accessible and carefully
+            crafted digital products. Right now I'm focused on building thoughtful web
+            experiences with React and Node.js.
+          </p>
+          <div class="hero-cta reveal" style="--delay: 320ms">
+            <a href="#projects" class="btn btn-primary">
+              View my work
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="assets/resume.pdf" class="btn btn-ghost" download>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+          </div>
+          <ul class="socials reveal" style="--delay: 400ms" aria-label="Social links">
+            <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a></li>
+            <li><a href="https://x.com/your-handle" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a></li>
+            <li><a href="mailto:you@example.com" aria-label="Email">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--delay: 200ms">
+          <div class="avatar-wrap">
+            <img src="assets/images/avatar.svg" alt="Portrait of Your Name" width="360" height="360" />
+          </div>
+          <div class="float-card float-card-1" aria-hidden="true">
+            <span class="float-icon"><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+            Clean, tested code
+          </div>
+          <div class="float-card float-card-2" aria-hidden="true">
+            <span class="float-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            Your City, Country
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">01 / About</p>
+          <h2 class="section-title">A little about me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a developer based in <strong>Your City</strong> who loves building products that
+              are fast, accessible and a joy to use. It started when I tinkered with my first
+              website in school, and I've been hooked on turning ideas into interfaces ever since.
+            </p>
+            <p>
+              Today I work across the stack, from designing component systems in <strong>React</strong>
+              to building APIs with <strong>Node.js</strong> and <strong>PostgreSQL</strong>. I care
+              about clean code, thoughtful UX and shipping work I'm proud of.
+            </p>
+            <p>
+              When I'm not coding, you'll find me reading about design, contributing to open source,
+              or exploring a new city with a camera.
+            </p>
+            <ul class="about-facts">
+              <li><span>Location</span> Your City, Country</li>
+              <li><span>Email</span> <a href="mailto:you@example.com">you@example.com</a></li>
+              <li><span>Freelance</span> Available</li>
+              <li><span>Languages</span> English</li>
+            </ul>
+          </div>
+
+          <div class="stats reveal" style="--delay: 120ms">
+            <div class="stat">
+              <div class="stat-value"><span data-count="5">5</span><span class="plus">+</span></div>
+              <p>Years of experience</p>
+            </div>
+            <div class="stat">
+              <div class="stat-value"><span data-count="40">40</span><span class="plus">+</span></div>
+              <p>Projects completed</p>
+            </div>
+            <div class="stat">
+              <div class="stat-value"><span data-count="25">25</span><span class="plus">+</span></div>
+              <p>Happy clients</p>
+            </div>
+            <div class="stat">
+              <div class="stat-value"><span data-count="12">12</span><span class="plus">+</span></div>
+              <p>Open-source repos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Skills (rendered from js/data.js) ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">02 / Skills</p>
+          <h2 class="section-title">Tools &amp; technologies</h2>
+          <p class="section-sub">The stack I use to design, build and ship products end to end.</p>
+        </header>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ Projects (rendered from js/data.js) ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">03 / Projects</p>
+          <h2 class="section-title">Selected work</h2>
+          <p class="section-sub">A few projects I've designed and built. Each one taught me something new.</p>
+        </header>
+        <div class="filters reveal" id="project-filters" role="group" aria-label="Filter projects by category"></div>
+        <div class="projects-grid" id="projects-grid"></div>
+        <noscript><p class="section-sub">Enable JavaScript to see my projects, or visit my GitHub.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ Experience (rendered from js/data.js) ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">04 / Experience</p>
+          <h2 class="section-title">Where I've worked</h2>
+          <p class="section-sub">My professional journey so far, and what I learned along the way.</p>
+        </header>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="section-kicker">05 / Contact</p>
+            <h2 class="section-title">Let's build something together</h2>
+            <p>
+              Have a project in mind, a role to fill, or just want to say hi?
+              My inbox is always open and I'll get back to you within a day or two.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:you@example.com">
+                  <span class="ci-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                  <span><small>Email</small>you@example.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                  <span class="ci-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                  <span><small>LinkedIn</small>/in/your-profile</span>
+                </a>
+              </li>
+              <li>
+                <div>
+                  <span class="ci-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span><small>Location</small>Your City, Country</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            Contact form. With no backend it opens the visitor's email app (mailto).
+            To receive messages directly, create a free form at https://formspree.io
+            and set data-endpoint="https://formspree.io/f/your-id" below.
+          -->
+          <form class="contact-form reveal" id="contact-form" style="--delay: 120ms"
+                data-endpoint="" data-mailto="you@example.com" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required aria-describedby="name-error" />
+                <p class="field-error" id="name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@company.com" required aria-describedby="email-error" />
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject <span class="optional">(optional)</span></label>
+              <input id="subject" name="subject" type="text" placeholder="Project enquiry" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" minlength="10" placeholder="Tell me a bit about your project..." required aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error" aria-live="polite"></p>
+            </div>
+            <!-- Honeypot field: hidden from people, catches spam bots -->
+            <div class="hp" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary">
+                Send message
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a href="#home" class="icon-btn back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </a>
+</body>
+</html>
